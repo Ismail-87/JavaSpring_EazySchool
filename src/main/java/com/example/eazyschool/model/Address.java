@@ -22,7 +22,7 @@ public class Address extends BaseEntity{
    // @GenericGenerator(name = "native",strategy = "native")
     private int addressId;
 
-    @NotBlank(message="Address1 must not be blank")
+    @NotBlank(message="Address1 should not be blank")
     @Size(min=5, message="Address1 must be at least 5 characters long")
     private String address1;
 
