@@ -3,9 +3,7 @@ pipeline {
 	tools {
         maven 'MAVEN_HOME'
           }
-	triggers {
-        cron('H/2 * * * *')
-    }
+	
     stages {
         stage('Build') { 
             steps { 
@@ -15,7 +13,7 @@ pipeline {
         stage('Test'){
             steps {
                 sh 'maven test'
-                junit 'target/surefire_reports/*.xml' 
+                
             }
         }
         
