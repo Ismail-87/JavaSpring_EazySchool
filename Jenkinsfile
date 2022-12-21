@@ -1,19 +1,15 @@
 pipeline { 
     agent any 
-	tools {
-        maven 'MAVEN_HOME'
-          }
-	
+
     stages {
         stage('Build') { 
             steps { 
-                sh 'maven clean compile' 
+                echo "this is a test" 
             }
         }
         stage('Test'){
             steps {
-                sh 'maven test'
-                
+				echo" this is test2"                
             }
         }
         
