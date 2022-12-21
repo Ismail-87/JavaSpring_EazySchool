@@ -1,15 +1,18 @@
 pipeline { 
     agent any 
+    tools {
+    'MAVEN_HOME'
+    }
 
     stages {
         stage('Build') { 
             steps { 
-                echo "this is a test" 
+                sh 'mvn clean package'
             }
         }
         stage('Test'){
             steps {
-				echo" this is test2"                
+				sh 'mvn test'               
             }
         }
         
