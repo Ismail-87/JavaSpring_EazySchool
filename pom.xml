@@ -12,7 +12,9 @@
 	<groupId>com.example</groupId>
 	<artifactId>eazyschool10</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>eazyschool10</name>
+	
 	<description>Sorting_feature</description>
 	<properties>
 		<java.version>11</java.version>
