@@ -1,15 +1,20 @@
 pipeline { 
     agent any 
+    
+    environment {
+    JAVA_HOME ='C:\Program Files\Java\jdk-11.0.16'
+    MAVEN_HOME = 'C:\Program Files\maven'
+    }
    
     stages {
-        stage('Build') { 
+        stage('Maven') { 
             steps { 
-                sh 'mvn clean compile package'
+                sh 'mvn --version'
             }
         }
-        stage('Test'){
+        stage('Build'){
             steps {
-				sh 'mvn test'               
+				sh 'mvn clean compile'               
             }
         }
         
