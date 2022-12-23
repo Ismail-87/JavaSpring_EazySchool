@@ -8,6 +8,9 @@ class EazyschoolApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
+		System.out.println("this is a dummy test");
+		
 	}
 
 }
