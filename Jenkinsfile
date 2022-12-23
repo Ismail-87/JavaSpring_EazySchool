@@ -7,22 +7,23 @@ pipeline {
   	 }
   	 
   	
-    stages {
-        
+  stages {  
               
-        stage('clean'){
+        stage('clean') {
             steps {
-				sh 'mvn clean'            
-            }
-        }
+		 sh 'mvn clean'            
+                 }
+       	 }
         
-        stage('Compile'){
+        stage('Compile') {
             steps {
-				sh 'mvn compile'            
-    }
+		sh 'mvn compile'  
+	    	}
+   	 }
        stage('package){
-       steps {
-       				sh 'mvn package'
-				}
-       }
+      	   steps {
+       	       sh 'mvn package'
+		}
+	 }
+  }
 }
