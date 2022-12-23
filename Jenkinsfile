@@ -2,18 +2,17 @@ pipeline {
     agent any 
     
    tools {
-   		maven 'M3'
+   		maven '3.8.6'
+   		jdk 'JAVA_HOME'
   	 }
-   
+  	 
+  	
     stages {
-        stage('Maven') { 
-            steps { 
-                sh 'mvn --version'
-            }
-        }
+        
+              
         stage('Build'){
             steps {
-				sh 'mvn clean compile'               
+				sh 'mvn clean compile package'            
             }
         }
         
