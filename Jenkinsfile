@@ -27,7 +27,7 @@ pipeline {
 	 }
 	 stage('docker image'){
       	   steps {
-       	       sh 'docker image build -t Ismail/javaApp_v1 ./'
+       	       sh 'docker image build -t ismail/javaapp_v1 ./'
 		}
 	 }
   }
