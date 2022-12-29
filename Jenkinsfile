@@ -25,5 +25,10 @@ pipeline {
        	       sh 'mvn package'
 		}
 	 }
+	 stage('docker image'){
+      	   steps {
+       	       sh 'docker image build -t Ismail/javaApp_v1 ./'
+		}
+	 }
   }
 }
