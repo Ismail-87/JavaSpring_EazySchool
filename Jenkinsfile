@@ -11,7 +11,7 @@ pipeline {
               
         stage('clean') {
             steps {
-		 echo "clean process started"   
+		 echo "clean process begin"   
 		 sh 'mvn clean'
 		 echo "clean process end"
                  }
