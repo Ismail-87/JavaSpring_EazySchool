@@ -28,7 +28,9 @@ pipeline {
       	   steps {
 		 echo "package process started"
        	       sh 'mvn package'
-		 echo "package process end"
+
+		   echo "package completed"
+
 		}
 	 }
   }
