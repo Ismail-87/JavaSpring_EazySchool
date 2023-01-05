@@ -11,18 +11,24 @@ pipeline {
               
         stage('clean') {
             steps {
-		 sh 'mvn clean'            
+		 echo "clean process started"   
+		 sh 'mvn clean'
+		 echo "clean process end"
                  }
        	 }
         
         stage('Compile') {
             steps {
-		sh 'mvn compile'  
+		 echo "compile process started"
+		sh 'mvn compile' 
+		 echo "compile process end"
 	    	}
    	 }
        stage('package'){
       	   steps {
+		 echo "package process started"
        	       sh 'mvn package'
+		 echo "package process end"
 		}
 	 }
   }
