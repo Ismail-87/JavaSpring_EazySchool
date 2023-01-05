@@ -13,7 +13,7 @@ pipeline {
             steps {
 		 echo "clean process started"   
 		 sh 'mvn clean'
-		 echo "clean process end"
+		 echo "clean process end now"
                  }
        	 }
         
